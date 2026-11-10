@@ -1,0 +1,9 @@
+{
+  "name": "picnic",
+  "framework": "react",
+  "styling": "css",
+  "preset": "video",
+  "base": "default",
+  "videojs": "10.3.0",
+  "source": "src"
+}

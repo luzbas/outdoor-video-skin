@@ -1,0 +1,33 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: #05070d;
+}
+
+.stage {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  padding: clamp(0px, 2vw, 24px);
+  box-sizing: border-box;
+}
+
+/* 16:9 on wide screens, as large as fits; upright on phones, where the skin switches to its portrait framing. */
+.demo-player {
+  width: min(100%, calc((100vh - 4vw) * 16 / 9));
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 600px) {
+  .stage {
+    padding: 0;
+  }
+
+  .demo-player {
+    width: 100%;
+    aspect-ratio: auto;
+    height: 100dvh;
+  }
+}
